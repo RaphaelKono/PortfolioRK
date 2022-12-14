@@ -1,1 +1,29 @@
-<p>start works!</p>
+<div class="start">
+    <div class="gradient-background"></div>
+    <div class="ellipse-one"></div>
+    <div class="ellipse-two"></div>
+    <div class="start-container d-flex justify-content-between">
+        <img class="photo" src="assets/img/rk.png">
+        <div class="start-content d-flex flex-column justify-content-between wrapper-right">
+            <div class="greeting">
+                <h2 class="introduction d-flex">Hello! I am Raphael</h2>
+                <h1 class="frontend">FRONTEND</h1>
+                <h1 class="developer">DEVELOPER</h1>
+            </div>
+            <div class="advices">
+                <div class="scroll-advice d-flex flex-column align-items-center">
+                    <h3><a href="">SCROLL</a></h3>
+                    <div class="divider">
+                        <div></div>
+                        <div class="start-links d-flex flex-column">
+                            <a *ngFor="let links of startlinks" href="{{links.url | safe}}"><object data="assets/svg/{{links.name}}.svg"></object></a>
+                            <!-- <a href=""><object data="assets/svg/gitlink.svg"></object></a>
+                            <a href=""><object data="assets/svg/contact.svg"></object></a>
+                            <a href=""><object data="assets/svg/linkedIn.svg"></object></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

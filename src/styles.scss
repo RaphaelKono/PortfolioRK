@@ -1,4 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    font-size: 16px;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.mat-typography,
+.mat-h2,
+.mat-headline-6,
+.mat-typography .mat-h2,
+.mat-typography .mat-headline-6,
+.mat-typography h2,
+.mat-h1,
+.mat-headline-5,
+.mat-typography .mat-h1,
+.mat-typography .mat-headline-5,
+.mat-typography h1 {
+    font: unset;
+    letter-spacing: unset;
+}
+
+h1,
+.mat-h1,
+.mat-headline-5,
+.mat-typography .mat-h1,
+.mat-typography .mat-headline-5,
+.mat-typography h1 {
+    font-family: 'Baloo 2';
+    font-size: 8rem;
+    font-weight: 700;
+    color: #5988FF;
+}
+
+h2,
+.mat-h2,
+.mat-headline-6,
+.mat-typography .mat-h2,
+.mat-typography .mat-headline-6,
+.mat-typography h2 {
+    font-family: 'Montserrat';
+    font-size: 4rem;
+    color: #5988FF;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-between {
+    align-items: space-between;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.wrapper {
+    margin: 0 15vw;
+}
+
+.wrapper-left {
+    margin-left: 15vw;
+}
+
+.wrapper-right {
+    margin-right: 15vw;
+}
+
+.ellipse-one {
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 87vmin;
+    width: 87vmin;
+    top: -15vmin;
+    left: -15vmin;
+}
+
+.ellipse-two {
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+    width: 20vmin;
+    height: 20vmin;
+    bottom: calc(-20vmin/2);
+    left: calc(50% - 20vmin/2);
+}
+
+.ellipse-three {
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+    border-radius: 100%;
+    width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    top: 3.5rem;
+    right: 25vw;
+}

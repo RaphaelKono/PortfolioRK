@@ -1,0 +1,36 @@
+.skill-container {
+    background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
+    color: white;
+    h1 {
+        color: white;
+        margin: 0;
+        padding: 0;
+        line-height: 6.5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.vertical-spacing {
+    padding-block: 10rem;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 4rem;
+    li {
+        font-family: 'Montserrat';
+        gap: 1rem;
+        margin-top: 3rem;
+        &:hover {
+            object {
+                transform: translate3d(4px, -10px, 0);
+                transition: all ease-in-out 125ms;
+            }
+            font-weight: 700;
+        }
+    }
+}
