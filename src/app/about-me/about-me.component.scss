@@ -6,29 +6,8 @@
 
 .about-me-childs {
     flex: 1;
-    p {
-        font-size: 1.5rem;
-        font-family: 'Montserrat';
-    }
 }
 
-.set-small-mrg {
-    margin-bottom: -7rem;
-}
-
-.go-to-contact {
-    font-family: 'Poppins';
-    padding: 1rem 2rem;
-    background: unset;
-    border: unset;
-    border: 2px solid #5988FF;
-    border-radius: .5rem;
-    color: #5988FF;
-    font-size: 1.5rem;
-    text-decoration: none;
-    cursor: pointer;
-    &:hover {
-        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
-        color: white;
-    }
+.adapt-line-height {
+    line-height: 5rem;
 }

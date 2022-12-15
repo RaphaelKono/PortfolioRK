@@ -7,12 +7,8 @@ import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl
   styleUrls: ['./start.component.scss']
 })
 
-@Inject({
-  pipetransform: 'nothing'
-})
+export class StartComponent implements PipeTransform {
 
-export class StartComponent {
-  constructor(public pipe: Pipe, public pipetransform: PipeTransform){}
   startlinks: any[] = [
     {
       name: 'gitlink',
@@ -26,4 +22,27 @@ export class StartComponent {
       name: 'gitlinkedInlink',
       url: ''
     }];
+
+  constructor(protected _sanitizer: DomSanitizer) { }
+
+  transform(value: string, type: string): SafeHtml | SafeStyle | SafeScript | SafeUrl | SafeResourceUrl {
+    switch (type) {
+      case 'html':
+        return this._sanitizer.bypassSecurityTrustHtml(value);
+      case 'style':
+        return this._sanitizer.bypassSecurityTrustStyle(value);
+      case 'script':
+        return this._sanitizer.bypassSecurityTrustScript(value);
+      case 'url':
+        return this._sanitizer.bypassSecurityTrustUrl(value);
+      case 'resourceUrl':
+        return this._sanitizer.bypassSecurityTrustResourceUrl(value);
+      default:
+        return this._sanitizer.bypassSecurityTrustHtml(value);
+    }
+  }
+
+  photoURL(url: string) {
+    return this._sanitizer.bypassSecurityTrustUrl(url);
+  }
 }

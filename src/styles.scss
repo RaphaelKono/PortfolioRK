@@ -7,6 +7,11 @@ body {
     scroll-behavior: smooth;
 }
 
+.mat-h3,
+.mat-subtitle-1,
+.mat-typography .mat-h3,
+.mat-typography .mat-subtitle-1,
+.mat-typography h3,
 .mat-typography,
 .mat-h2,
 .mat-headline-6,
@@ -45,6 +50,29 @@ h2,
     color: #5988FF;
 }
 
+h3,
+.mat-h3,
+.mat-subtitle-1,
+.mat-typography .mat-h3,
+.mat-typography .mat-subtitle-1,
+.mat-typography h3 {
+    color: #5988FF;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+}
+
+.mat-body p,
+.mat-body-2 p,
+.mat-typography .mat-body p,
+.mat-typography .mat-body-2 p,
+.mat-typography p {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    margin: unset;
+    margin-block-start: .75em;
+    margin-block-end: .75em;
+}
+
 .d-flex {
     display: flex;
 }
@@ -55,6 +83,10 @@ h2,
 
 .flex-column-reverse {
     flex-direction: column-reverse;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
 }
 
 .justify-content-center {
@@ -119,4 +151,63 @@ h2,
     position: absolute;
     top: 3.5rem;
     right: 25vw;
+}
+
+.main-btn {
+    font-family: 'Poppins';
+    padding: 1rem 2rem;
+    background: unset;
+    border: unset;
+    border: 2px solid #5988FF;
+    border-radius: .5rem;
+    color: #5988FF;
+    font-size: 1.5rem;
+    text-decoration: none;
+    animation: btnempty 125ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+        color: white;
+        animation: btnfill 125ms ease-in-out;
+    }
+}
+
+@keyframes btnfill {
+    0% {
+        background: none;
+        color: #5988FF;
+    }
+    25% {
+        background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+    }
+    50% {
+        background: linear-gradient(104.85deg, #5988FF -45.22%, #5988FF -37.45%, #0043F0 45.88%, #FFFFFF 48.64%, #FFFFFF 55.44%, #FFFFFF 90.08%);
+    }
+    75% {
+        background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
+    }
+    100% {
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+        color: white;
+    }
+}
+
+@keyframes btnempty {
+    100% {
+        background: none;
+        color: #5988FF;
+    }
+    75% {
+        background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+    }
+    50% {
+        background: linear-gradient(104.85deg, #5988FF -45.22%, #5988FF -37.45%, #0043F0 45.88%, #FFFFFF 48.64%, #FFFFFF 55.44%, #FFFFFF 90.08%);
+    }
+    25% {
+        background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
+    }
+    0% {
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+        color: white;
+    }
 }
