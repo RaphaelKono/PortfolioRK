@@ -1,1 +1,31 @@
-<p>contact works!</p>
+<div class="contact-container">
+    <div class="wrapper">
+        <h1>Contact</h1>
+        <div class="contact-grid">
+            <div class="contact-description">
+                <h2><b>Got a problem to solve?</b></h2>
+                <p style="margin-block: 4rem;">Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p>
+                <p class="blue">Need a Frontend developer? <b>Contact me!</b></p>
+            </div>
+            <div class="d-flex flex-column">
+                <mat-form-field class="d-flex align-items-center" appearance="outline">
+                    <mat-label>Your name</mat-label>
+                    <input class="d-flex align-items-center" matInput placeholder="" [formControl]="name" required>
+                    <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>
+                    <mat-icon matSuffix><img style="width:2rem; height:2rem; background:blue; margin-right:.5rem;" src="assets/img/logo.png"></mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Your email</mat-label>
+                    <input matInput placeholder="" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getMailErrorMessage()}}</mat-error>
+                    <mat-icon matSuffix><img style="width:2rem; height:2rem; background:blue; margin-right:.5rem;" src="assets/img/logo.png"></mat-icon>
+                </mat-form-field>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-label>Your message</mat-label>
+                    <textarea matInput></textarea>
+                    <mat-icon matSuffix><img class="textarea-icon" style="width:2rem; height:2rem; background:blue; margin-right:.5rem;" src="assets/img/logo.png"></mat-icon>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>

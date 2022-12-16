@@ -1,9 +1,13 @@
+@import "../../assets/css/colors.scss";
 .my-work-bg {
-    background: #F5F5F5;
+    background: $white-color;
     padding-block: 8rem;
 }
 
 .my-work-container {
+    h1 {
+        margin-bottom: 5rem;
+    }
     h2 {
         font-size: 3rem;
         font-weight: 700;

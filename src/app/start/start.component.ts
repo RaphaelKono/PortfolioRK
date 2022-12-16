@@ -11,17 +11,18 @@ export class StartComponent {
 
   startlinks: any[] = [
     {
-      name: 'gitlink.svg',
+      name: 'assets/svg/gitlink.svg',
       url: ''
     },
     {
-      name: 'contact.svg',
+      name: 'assets/svg/contact.svg',
       url: ''
     },
     {
-      name: 'linkedIn.svg',
+      name: 'assets/svg/linkedIn.svg',
       url: ''
-    }];
+    }
+  ];
 
   constructor(public _sanitizer: DomSanitizer) { }
 

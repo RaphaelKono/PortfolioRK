@@ -24,14 +24,7 @@
 }
 
 .introduction {
-    margin: 0;
-    gap: 1rem;
-}
-
-.frontend {
-    font-size: 8rem !important;
-    margin-bottom: -7rem;
-    margin-top: -3rem;
+    margin-bottom: 10px;
 }
 
 .developer {
@@ -71,5 +64,17 @@
         transform: translateX(-10px);
         transition: all ease-in-out 125ms;
         cursor: pointer;
+    }
+}
+
+@media(max-height: 800px) {
+    .start-content {
+        margin-top: 2rem;
+    }
+    .frontend {
+        font-size: 5rem !important;
+    }
+    .developer {
+        font-size: 5rem;
     }
 }

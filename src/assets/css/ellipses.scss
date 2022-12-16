@@ -1,0 +1,87 @@
+.ellipse-one {
+    @extend .ellipse;
+    z-index: -1;
+    height: 87vmin;
+    width: 87vmin;
+    top: -15vmin;
+    left: -15vmin;
+}
+
+.ellipse-two {
+    @extend .ellipse;
+    z-index: 1;
+    width: 20vmin;
+    height: 20vmin;
+    bottom: calc(-20vmin/2);
+    left: calc(50% - 20vmin/2);
+}
+
+.ellipse-three {
+    @extend .ellipse;
+    width: 7vmin;
+    height: 7vmin;
+    top: 3.5rem;
+    right: 25vw;
+}
+
+.ellipse-four {
+    @extend .ellipse;
+    width: 107px;
+    height: 107px;
+    top: -1rem;
+    left: 37rem;
+}
+
+.ellipse-five {
+    @extend .ellipse;
+    width: 183px;
+    height: 183px;
+    top: -6rem;
+    left: 80rem;
+}
+
+.ellipse-six {
+    @extend .ellipse;
+    width: 393px;
+    height: 393px;
+    top: 10rem;
+    left: -18rem;
+}
+
+.ellipse-seven {
+    @extend .ellipse;
+    width: 652px;
+    height: 652px;
+    top: -2rem;
+    left: 16rem;
+}
+
+.ellipse-eight {
+    @extend .ellipse;
+    width: 237px;
+    height: 237px;
+    top: 18rem;
+    left: 3rem;
+}
+
+.ellipse-nine {
+    @extend .ellipse;
+    width: 51px;
+    height: 51px;
+    top: 26rem;
+    left: -2rem;
+}
+
+.ellipse-ten {
+    @extend .ellipse;
+    width: 98px;
+    height: 98px;
+    top: 26rem;
+    left: 37rem;
+}
+
+.ellipse {
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $blue-color 6.25%, $blue-color 51.56%, #0043F0 100%);
+    border-radius: 100%;
+    position: absolute;
+}

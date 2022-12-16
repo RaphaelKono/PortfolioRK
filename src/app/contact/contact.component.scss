@@ -1,0 +1,33 @@
+@import "../../assets/css/colors.scss";
+.contact-container {
+    background-color: $white-color;
+    padding-block: 10rem;
+    h1 {
+        margin-bottom: 8rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+}
+
+.blue {
+    color: $blue-color;
+}
+
+.mdc-text-field {
+    border: unset;
+    border: 1px solid blue !important;
+    border-radius: 10px !important;
+}
+
+.textarea-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
