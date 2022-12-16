@@ -20,14 +20,21 @@
     color: $blue-color;
 }
 
-.mdc-text-field {
-    border: unset;
-    border: 1px solid blue !important;
-    border-radius: 10px !important;
+.textarea-icon {
+    position: absolute;
+    top: -20px;
+    right: 0px;
 }
 
-.textarea-img {
-    position: absolute;
-    top: 0;
-    right: 0;
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: $blue-color !important;
+}
+
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading {
+    border-top-left-radius: 30px !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: var(--mdc-shape-small, 4px);
 }
