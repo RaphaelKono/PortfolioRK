@@ -14,6 +14,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { SafeUrlPipe } from './safe-url.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContactComponent } from './contact/contact.component';
     PrivacyComponent,
     HeaderComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,58 @@
+.main-btn {
+    font-family: 'Poppins';
+    padding: 1rem 2rem;
+    background: unset;
+    border: unset;
+    border: 2px solid $blue-color;
+    border-radius: .5rem;
+    color: $blue-color;
+    font-size: 1.5rem;
+    text-decoration: none;
+    animation: btnempty 125ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $blue-color 6.25%, $blue-color 51.56%, #0043F0 100%);
+        color: white;
+        animation: btnfill 125ms ease-in-out;
+    }
+}
+
+@keyframes btnfill {
+    0% {
+        background: none;
+        color: $blue-color;
+    }
+    25% {
+        background: linear-gradient(104.85deg, $blue-color -90.22%, $blue-color -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+    }
+    50% {
+        background: linear-gradient(104.85deg, $blue-color -45.22%, $blue-color -37.45%, #0043F0 45.88%, #FFFFFF 48.64%, #FFFFFF 55.44%, #FFFFFF 90.08%);
+    }
+    75% {
+        background: linear-gradient(104.4deg, $blue-color 9.21%, $blue-color 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
+    }
+    100% {
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $blue-color 6.25%, $blue-color 51.56%, #0043F0 100%);
+        color: white;
+    }
+}
+
+@keyframes btnempty {
+    100% {
+        background: none;
+        color: $blue-color;
+    }
+    75% {
+        background: linear-gradient(104.85deg, $blue-color -90.22%, $blue-color -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+    }
+    50% {
+        background: linear-gradient(104.85deg, $blue-color -45.22%, $blue-color -37.45%, #0043F0 45.88%, #FFFFFF 48.64%, #FFFFFF 55.44%, #FFFFFF 90.08%);
+    }
+    25% {
+        background: linear-gradient(104.4deg, $blue-color 9.21%, $blue-color 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
+    }
+    0% {
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $blue-color 6.25%, $blue-color 51.56%, #0043F0 100%);
+        color: white;
+    }
+}

@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "assets/css/colors.scss";
+@import "assets/css/adapt-md.scss";
+@import "assets/css/general.scss";
+@import "assets/css/main-btn.scss";
 html,
 body {
     font-size: 16px;
@@ -7,124 +11,8 @@ body {
     scroll-behavior: smooth;
 }
 
-.mat-h3,
-.mat-subtitle-1,
-.mat-typography .mat-h3,
-.mat-typography .mat-subtitle-1,
-.mat-typography h3,
-.mat-typography,
-.mat-h2,
-.mat-headline-6,
-.mat-typography .mat-h2,
-.mat-typography .mat-headline-6,
-.mat-typography h2,
-.mat-h1,
-.mat-headline-5,
-.mat-typography .mat-h1,
-.mat-typography .mat-headline-5,
-.mat-typography h1 {
-    font: unset;
-    letter-spacing: unset;
-}
-
-h1,
-.mat-h1,
-.mat-headline-5,
-.mat-typography .mat-h1,
-.mat-typography .mat-headline-5,
-.mat-typography h1 {
-    font-family: 'Baloo 2';
-    font-size: 8rem;
-    font-weight: 700;
-    color: #5988FF;
-}
-
-h2,
-.mat-h2,
-.mat-headline-6,
-.mat-typography .mat-h2,
-.mat-typography .mat-headline-6,
-.mat-typography h2 {
-    font-family: 'Montserrat';
-    font-size: 4rem;
-    color: #5988FF;
-}
-
-h3,
-.mat-h3,
-.mat-subtitle-1,
-.mat-typography .mat-h3,
-.mat-typography .mat-subtitle-1,
-.mat-typography h3 {
-    color: #5988FF;
-    font-family: 'Montserrat';
-    font-size: 2rem;
-}
-
-.mat-body p,
-.mat-body-2 p,
-.mat-typography .mat-body p,
-.mat-typography .mat-body-2 p,
-.mat-typography p {
-    font-family: 'Montserrat';
-    font-size: 1.5rem;
-    margin: unset;
-    margin-block-start: .75em;
-    margin-block-end: .75em;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.flex-column-reverse {
-    flex-direction: column-reverse;
-}
-
-.flex-row-reverse {
-    flex-direction: row-reverse;
-}
-
-.justify-content-center {
-    justify-content: center;
-}
-
-.justify-content-between {
-    justify-content: space-between;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.align-items-between {
-    align-items: space-between;
-}
-
-.txt-center {
-    text-align: center;
-}
-
-.wrapper {
-    margin: 0 15vw;
-}
-
-.wrapper-left {
-    margin-left: 15vw;
-}
-
-.wrapper-right {
-    margin-right: 15vw;
-}
-
 .ellipse-one {
-    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
-    border-radius: 100%;
-    position: absolute;
+    @extend .ellipse;
     z-index: -1;
     height: 87vmin;
     width: 87vmin;
@@ -133,9 +21,7 @@ h3,
 }
 
 .ellipse-two {
-    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
-    border-radius: 100%;
-    position: absolute;
+    @extend .ellipse;
     z-index: 1;
     width: 20vmin;
     height: 20vmin;
@@ -144,70 +30,23 @@ h3,
 }
 
 .ellipse-three {
-    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
-    border-radius: 100%;
+    @extend .ellipse;
     width: 7vmin;
     height: 7vmin;
-    position: absolute;
     top: 3.5rem;
     right: 25vw;
 }
 
-.main-btn {
-    font-family: 'Poppins';
-    padding: 1rem 2rem;
-    background: unset;
-    border: unset;
-    border: 2px solid #5988FF;
-    border-radius: .5rem;
-    color: #5988FF;
-    font-size: 1.5rem;
-    text-decoration: none;
-    animation: btnempty 125ms ease-in-out;
-    cursor: pointer;
-    &:hover {
-        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
-        color: white;
-        animation: btnfill 125ms ease-in-out;
-    }
+.ellipse-four {
+    @extend .ellipse;
+    width: 107px;
+    height: 107px;
+    top: -1rem;
+    left: 37rem;
 }
 
-@keyframes btnfill {
-    0% {
-        background: none;
-        color: #5988FF;
-    }
-    25% {
-        background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
-    }
-    50% {
-        background: linear-gradient(104.85deg, #5988FF -45.22%, #5988FF -37.45%, #0043F0 45.88%, #FFFFFF 48.64%, #FFFFFF 55.44%, #FFFFFF 90.08%);
-    }
-    75% {
-        background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
-    }
-    100% {
-        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
-        color: white;
-    }
-}
-
-@keyframes btnempty {
-    100% {
-        background: none;
-        color: #5988FF;
-    }
-    75% {
-        background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
-    }
-    50% {
-        background: linear-gradient(104.85deg, #5988FF -45.22%, #5988FF -37.45%, #0043F0 45.88%, #FFFFFF 48.64%, #FFFFFF 55.44%, #FFFFFF 90.08%);
-    }
-    25% {
-        background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
-    }
-    0% {
-        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
-        color: white;
-    }
+.ellipse {
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $blue-color 6.25%, $blue-color 51.56%, #0043F0 100%);
+    border-radius: 100%;
+    position: absolute;
 }

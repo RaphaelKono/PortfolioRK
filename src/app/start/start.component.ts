@@ -7,23 +7,23 @@ import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl
   styleUrls: ['./start.component.scss']
 })
 
-export class StartComponent implements PipeTransform {
+export class StartComponent {
 
   startlinks: any[] = [
     {
-      name: 'gitlink',
+      name: 'gitlink.svg',
       url: ''
     },
     {
-      name: 'contact',
+      name: 'contact.svg',
       url: ''
     },
     {
-      name: 'gitlinkedInlink',
+      name: 'linkedIn.svg',
       url: ''
     }];
 
-  constructor(protected _sanitizer: DomSanitizer) { }
+  constructor(public _sanitizer: DomSanitizer) { }
 
   transform(value: string, type: string): SafeHtml | SafeStyle | SafeScript | SafeUrl | SafeResourceUrl {
     switch (type) {
@@ -34,6 +34,7 @@ export class StartComponent implements PipeTransform {
       case 'script':
         return this._sanitizer.bypassSecurityTrustScript(value);
       case 'url':
+        console.log(this._sanitizer.bypassSecurityTrustUrl(value));
         return this._sanitizer.bypassSecurityTrustUrl(value);
       case 'resourceUrl':
         return this._sanitizer.bypassSecurityTrustResourceUrl(value);
