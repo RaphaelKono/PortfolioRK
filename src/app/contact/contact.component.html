@@ -12,29 +12,36 @@
                     <mat-label>Your name</mat-label>
                     <input class="d-flex align-items-center" matInput placeholder="" [formControl]="name" required>
                     <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>
-                    <mat-icon matSuffix><img style="width:2rem; height:2rem; background:blue; margin-right:.5rem;" src="assets/img/logo.png"></mat-icon>
+                    <mat-icon *ngIf="isTouched(name) && name.invalid" matSuffix>
+                        <object class="input-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object>
+                    </mat-icon>
+                    <mat-icon *ngIf="name.valid" matSuffix>
+                        <object class="input-icon" type="image/svg+xml" data="assets/svg/valid.svg"></object>
+                    </mat-icon>
                 </mat-form-field>
                 <mat-form-field [hideRequiredMarker]="true" appearance="outline">
                     <mat-label>Your email</mat-label>
                     <input matInput placeholder="" [formControl]="email" required>
                     <mat-error *ngIf="email.invalid">{{getMailErrorMessage()}}</mat-error>
-                    <mat-icon matSuffix><img style="width:2rem; height:2rem; background:blue; margin-right:.5rem;" src="assets/img/logo.png"></mat-icon>
+                    <mat-icon *ngIf="isTouched(email) && email.invalid" matSuffix>
+                        <object class="input-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object>
+                    </mat-icon>
+                    <mat-icon *ngIf="email.valid" matSuffix>
+                        <object class="input-icon" type="image/svg+xml" data="assets/svg/valid.svg"></object>
+                    </mat-icon>
                 </mat-form-field>
                 <mat-form-field [hideRequiredMarker]="true" class="form-field relative" appearance="outline">
                     <mat-label>Your message</mat-label>
                     <textarea matInput [formControl]="message"></textarea>
                     <mat-error *ngIf="message.invalid">{{getMsgErrorMessage()}}</mat-error>
-                    <!-- <mat-error *ngIf="message.invalid">
-                        <mat-icon matSuffix>
-                            <object class="textarea-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object></mat-icon>
-                    </mat-error> -->
-                    <mat-icon matSuffix>
-                        <mat-error *ngIf="message.invalid">
-                            <object class="textarea-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object>
-                        </mat-error>
+                    <mat-icon *ngIf="isTouched(message) && message.invalid" matSuffix>
+                        <object class="textarea-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object>
                     </mat-icon>
-
+                    <mat-icon *ngIf="message.valid" matSuffix>
+                        <object class="textarea-icon" type="image/svg+xml" data="assets/svg/valid.svg"></object>
+                    </mat-icon>
                 </mat-form-field>
+                <div class="d-flex justify-content-center"><button class="main-btn say-hello">Say hello ;)</button></div>
             </div>
         </div>
     </div>

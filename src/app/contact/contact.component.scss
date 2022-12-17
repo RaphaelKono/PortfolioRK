@@ -1,6 +1,6 @@
 @import "../../assets/css/colors.scss";
 .contact-container {
-    background-color: $white-color;
+    background: linear-gradient(179.99deg, $white-color 12.89%, #EAF0FF 91.39%);
     padding-block: 10rem;
     h1 {
         margin-bottom: 8rem;
@@ -8,6 +8,10 @@
     h2 {
         font-size: 2rem;
     }
+}
+
+.say-hello {
+    width: fit-content;
 }
 
 .contact-grid {
@@ -23,8 +27,13 @@
 .textarea-icon {
     position: absolute;
     top: 0;
+    // transform: translateY(-100%);
     right: 0;
     margin-top: .5rem;
+    margin-right: .5rem;
+}
+
+.input-icon {
     margin-right: .5rem;
 }
 
@@ -32,6 +41,10 @@ mat-label {
     font-family: 'Poppins';
     font-size: 1rem;
     color: black;
+}
+
+.form-field {
+    font-family: 'Poppins';
 }
 
 mat-error {

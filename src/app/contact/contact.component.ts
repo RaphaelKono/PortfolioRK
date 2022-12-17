@@ -1,17 +1,15 @@
-import { Component} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-import {FloatLabelType} from '@angular/material/form-field';
+import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent{
+export class ContactComponent {
   email = new FormControl('', [Validators.required, Validators.email]);
   name = new FormControl('', [Validators.required]);
   message = new FormControl('', [Validators.required]);
-
 
   getMailErrorMessage() {
     if (this.email.hasError('required')) {
@@ -34,11 +32,8 @@ export class ContactComponent{
     return '';
   }
 
-  getInvalidIcon(validatedFormControl: any){
-    if(validatedFormControl.hasError('required')){
-      console.log('spuck icon aus');
-      return '<object class="textarea-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object>';
-    }
-    return '';
+  isTouched(validatedFormControl: any) {
+    return validatedFormControl._pendingTouched;
   }
+
 }
