@@ -8,24 +8,36 @@
                 <p class="blue">Need a Frontend developer? <b>Contact me!</b></p>
             </div>
             <div class="d-flex flex-column">
-                <mat-form-field class="d-flex align-items-center" appearance="outline">
+                <mat-form-field [hideRequiredMarker]="true" class="d-flex align-items-center" appearance="outline">
                     <mat-label>Your name</mat-label>
                     <input class="d-flex align-items-center" matInput placeholder="" [formControl]="name" required>
                     <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>
                     <mat-icon matSuffix><img style="width:2rem; height:2rem; background:blue; margin-right:.5rem;" src="assets/img/logo.png"></mat-icon>
                 </mat-form-field>
-                <mat-form-field appearance="outline">
+                <mat-form-field [hideRequiredMarker]="true" appearance="outline">
                     <mat-label>Your email</mat-label>
                     <input matInput placeholder="" [formControl]="email" required>
                     <mat-error *ngIf="email.invalid">{{getMailErrorMessage()}}</mat-error>
                     <mat-icon matSuffix><img style="width:2rem; height:2rem; background:blue; margin-right:.5rem;" src="assets/img/logo.png"></mat-icon>
                 </mat-form-field>
-                <mat-form-field class="form-field" appearance="outline">
+                <mat-form-field [hideRequiredMarker]="true" class="form-field relative" appearance="outline">
                     <mat-label>Your message</mat-label>
-                    <textarea matInput></textarea>
-                    <mat-icon class="relative" matSuffix><img class="textarea-icon" style="width:2rem; height:2rem; background:blue; margin-right:.5rem;" src="assets/img/logo.png"></mat-icon>
+                    <textarea matInput [formControl]="message"></textarea>
+                    <mat-error *ngIf="message.invalid">{{getMsgErrorMessage()}}</mat-error>
+                    <!-- <mat-error *ngIf="message.invalid">
+                        <mat-icon matSuffix>
+                            <object class="textarea-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object></mat-icon>
+                    </mat-error> -->
+                    <mat-icon matSuffix>
+                        <mat-error *ngIf="message.invalid">
+                            <object class="textarea-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object>
+                        </mat-error>
+                    </mat-icon>
+
                 </mat-form-field>
             </div>
         </div>
     </div>
 </div>
+
+<!-- <object class="textarea-icon" type="image/svg+xml" data="assets/svg/invalid.svg"></object> -->

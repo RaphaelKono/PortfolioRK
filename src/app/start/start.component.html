@@ -17,7 +17,7 @@
                         <div></div>
                         <div class="start-links d-flex flex-column">
                             <a *ngFor="let links of startlinks" href="{{links.url}}" class="svg-link">
-                                <object [data]="links.name | safeUrl:'resourceUrl'"></object>
+                                <object type="image/svg+xml" [data]="links.name | safeUrl:'resourceUrl'"></object>
                             </a>
                             <!-- <a class="svg-link" href=""><object data="assets/svg/gitlink.svg"></object></a>
                             <a class="svg-link" href=""><object data="assets/svg/contact.svg"></object></a>

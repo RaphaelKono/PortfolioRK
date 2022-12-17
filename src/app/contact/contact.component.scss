@@ -22,19 +22,18 @@
 
 .textarea-icon {
     position: absolute;
-    top: -20px;
-    right: 0px;
+    top: 0;
+    right: 0;
+    margin-top: .5rem;
+    margin-right: .5rem;
 }
 
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
-    border-color: $blue-color !important;
+mat-label {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    color: black;
 }
 
-.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading {
-    border-top-left-radius: 30px !important;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: var(--mdc-shape-small, 4px);
+mat-error {
+    font-family: 'Poppins';
 }
