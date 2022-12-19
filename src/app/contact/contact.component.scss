@@ -50,6 +50,14 @@ mat-error {
     font-family: 'Poppins';
 }
 
+mat-form-field {
+    margin-bottom: 1.2rem;
+}
+
+textarea {
+    min-height: 202px;
+}
+
 .animate-contact-icon {
     animation: appearIcon 250ms ease-in-out;
 }
@@ -60,5 +68,18 @@ mat-error {
     }
     to {
         filter: opacity(1);
+    }
+}
+
+.back-to-top {
+    animation: backToTopIn 75ms ease-in;
+}
+
+@keyframes backToTopIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

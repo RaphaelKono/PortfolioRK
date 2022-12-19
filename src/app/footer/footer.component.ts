@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -6,18 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  startlinks: any[] = [
-    {
-      name: 'assets/svg/gitlink-white.svg',
-      svg: ''
-    },
-    {
-      name: 'assets/svg/contact-white.svg',
-      svg: ''
-    },
-    {
-      name: 'assets/svg/linkedIn-white.svg',
-      svg: ''
-    }
-  ];
+  constructor(private router: Router) { }
+
+  navigate(link: string){
+    this.router.navigateByUrl(link);
+  }
 }

@@ -25,7 +25,7 @@ h1,
 .mat-typography .mat-headline-5,
 .mat-typography h1 {
     font-family: 'Baloo 2';
-    font-size: 8rem;
+    font-size: calc(8rem + 1vh);
     font-weight: 700;
     color: $blue-color;
     line-height: 5rem;
@@ -38,7 +38,7 @@ h2,
 .mat-typography .mat-headline-6,
 .mat-typography h2 {
     font-family: 'Montserrat';
-    font-size: 4rem;
+    font-size: calc(4rem + 1vh);
     color: $blue-color;
 }
 
@@ -88,4 +88,34 @@ h3,
 .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
     padding-top: 16px;
     padding-bottom: 7px;
+}
+
+.mdc-text-field--outlined .mdc-notched-outline {
+    z-index: -1 !important;
+    background: white;
+    border-radius: 10px;
+}
+
+::-webkit-resizer {
+    background: url('../../assets/svg/grabber.svg') no-repeat;
+}
+
+@media(min-width:2560px) {
+    h2,
+    .mat-h2,
+    .mat-headline-6,
+    .mat-typography .mat-h2,
+    .mat-typography .mat-headline-6,
+    .mat-typography h2 {
+        font-size: calc(4rem + 2vh);
+    }
+    h1,
+    .mat-h1,
+    .mat-headline-5,
+    .mat-typography .mat-h1,
+    .mat-typography .mat-headline-5,
+    .mat-typography h1 {
+        font-size: calc(8rem + 1vh);
+        line-height: calc(5rem + 5vh);
+    }
 }

@@ -13,7 +13,10 @@ export class ContactComponent {
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     message: new FormControl('', [Validators.required])
-  })
+  });
+
+  submittedOnce=false;
+  backToTopHover = false;
 
   getMailErrorMessage() {
     if (this.contactForm.controls.email.hasError('required')) {
@@ -41,6 +44,7 @@ export class ContactComponent {
   }
 
   async sendMail() {
+    this.submittedOnce = true;
     if (this.contactForm.valid) {
       console.log('Sending mail', this.contactForm);
       this.contactForm.disable();
@@ -57,4 +61,7 @@ export class ContactComponent {
     }
   }
 
+  setHover(bool: boolean){
+    this.backToTopHover = bool;
+  }
 }

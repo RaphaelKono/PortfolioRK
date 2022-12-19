@@ -1,3 +1,9 @@
+.ellipse {
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $blue-color 6.25%, $blue-color 51.56%, #0043F0 100%);
+    border-radius: 100%;
+    position: absolute;
+}
+
 .ellipse-one {
     @extend .ellipse;
     z-index: -1;
@@ -80,8 +86,26 @@
     left: 37rem;
 }
 
-.ellipse {
-    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $blue-color 6.25%, $blue-color 51.56%, #0043F0 100%);
-    border-radius: 100%;
-    position: absolute;
+.ellipse-11 {
+    @extend .ellipse;
+    width: 130px;
+    height: 130px;
+    top: -10rem;
+    left: 25vw;
+}
+
+.ellipse-12 {
+    @extend .ellipse;
+    width: 204px;
+    height: 204px;
+    bottom: -8rem;
+    left: 14vw;
+}
+
+.ellipse-13 {
+    @extend .ellipse;
+    width: 74px;
+    height: 74px;
+    bottom: -14rem;
+    right: 0;
 }

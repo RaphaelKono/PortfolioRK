@@ -4,5 +4,9 @@ app-header {
     // left: 0;
     // right: 0;
     // height: 7.5vh;
-    height: 80px;
+    height: 80px !important;
+}
+
+.side {
+    background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%) !important;
 }

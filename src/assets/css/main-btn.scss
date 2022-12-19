@@ -8,12 +8,18 @@
     color: $blue-color;
     font-size: 1.5rem;
     text-decoration: none;
-    animation: btnempty 125ms ease-in-out;
+    transform: scale();
+    transition: transform 75ms ease-in-out;
+    animation: btnempty 75ms ease-in-out;
+    font-weight: 300;
     cursor: pointer;
     &:hover {
         background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, $blue-color 6.25%, $blue-color 51.56%, #0043F0 100%);
         color: white;
-        animation: btnfill 125ms ease-in-out;
+        transform: scale(1.2);
+        font-weight: 200;
+        transition: transform 75ms ease-in-out;
+        animation: btnfill 75ms ease-in-out;
         border: 2px solid $white-color;
     }
 }

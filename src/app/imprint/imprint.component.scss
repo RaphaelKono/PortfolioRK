@@ -1,0 +1,9 @@
+.imprint-content {
+    min-height: calc(100vh - 80px - 18rem);
+    flex-grow: 1;
+    margin-block: 8rem;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}

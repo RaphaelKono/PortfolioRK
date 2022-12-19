@@ -1,5 +1,5 @@
 .start {
-    min-height: calc(100vh + -80px);
+    min-height: calc(100vh - 80px);
 }
 
 .gradient-background {
@@ -12,11 +12,19 @@
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
 }
 
+.start-container {
+    justify-content: flex-end;
+    height: calc(100vh - 80px);
+}
+
 .photo {
     display: block;
     background: none;
     transform: scaleX(-1);
     height: calc(100vh + -80px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .start-content {
@@ -31,9 +39,15 @@
     font-size: 7.45rem;
 }
 
+.advices {
+    height: 100%;
+    width: 100%;
+}
+
 .scroll-advice {
     font-family: 'Montserrat';
     color: #5988FF;
+    width: 100%;
     h3 {
         font-size: 1.5rem;
     }
@@ -45,7 +59,7 @@
 
 .divider {
     width: 100%;
-    min-height: 30vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -76,5 +90,14 @@
     }
     .developer {
         font-size: 5rem;
+    }
+}
+
+@media(min-width:2560px) {
+    .frontend {
+        font-size: calc(8rem + 8vh);
+    }
+    .developer {
+        font-size: calc(8rem + 7vh);
     }
 }

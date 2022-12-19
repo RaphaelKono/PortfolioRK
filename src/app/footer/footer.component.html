@@ -1,13 +1,16 @@
 <footer>
     <div class="d-flex justify-content-between align-items-center wrapper">
-        <button class="logo">
+        <button (click)="navigate('')" class="logo">
         <img class="logo-img" src="assets/img/logo.png">
     </button>
         <h3 class="">© Raphael Konopatzki 2022</h3>
         <div class="d-flex footer-links">
-            <a *ngFor="let links of startlinks" href="{{links.url}}" class="svg-link">
-                <object type="image/svg+xml" [data]="links.name | safeUrl:'resourceUrl'"></object>
-            </a>
+            <a href="https://github.com/RaphaelKono" target="_blank" rel="noopener noreferrer"><img src="assets/svg/gitlink-white.svg" class="svg-link"></a>
+            <a href="#contact"><img src="assets/svg/contact-white.svg" class="svg-link"></a>
         </div>
+    </div>
+    <div class="footer-links nav-links d-flex justify-content-center">
+        <a (click)="navigate('imprint')" class="footer-link">Imprint</a>
+        <a (click)="navigate('privacy')" class="footer-link">Privacy</a>
     </div>
 </footer>

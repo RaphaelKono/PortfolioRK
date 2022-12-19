@@ -1,51 +1,63 @@
 <div class="contact-container">
-    <div class="wrapper">
+
+    <div class="wrapper relative">
+        <div class="ellipse-11"></div>
         <h1>Contact</h1>
         <div class="contact-grid">
-            <div class="contact-description">
-                <h2><b>Got a problem to solve?</b></h2>
-                <p style="margin-block: 4rem;">Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p>
-                <p class="blue">Need a Frontend developer? <b>Contact me!</b></p>
+            <div class="contact-description relative">
+                <h2><b>Want to implement a new project?</b></h2>
+                <p style="margin-block: 4rem;">Contact me through this form. I am looking forward to get to know you, your aims and to contribute to your projects with my work.</p>
+                <p class="blue relative">Need a Frontend developer? <b>Contact me!</b></p>
+                <div class="ellipse-12"></div>
             </div>
 
-            <form (submit)="sendMail()" class="d-flex flex-column" ngNativeValidate [formGroup]="contactForm" #myForm>
+            <form (submit)="sendMail()" class="d-flex flex-column relative" [formGroup]="contactForm" #myForm>
                 <mat-form-field [hideRequiredMarker]="true" class="d-flex align-items-center" appearance="outline">
                     <mat-label>Your name</mat-label>
                     <input class="d-flex align-items-center" matInput placeholder="" formControlName="name" name="name" required>
                     <mat-error *ngIf="contactForm.invalid">{{getNameErrorMessage()}}</mat-error>
                     <mat-icon matSuffix></mat-icon>
-                    <mat-icon *ngIf="(isTouched(contactForm.controls.name) && contactForm.controls.name.invalid)" matSuffix>
+                    <mat-icon *ngIf="(isTouched(contactForm.controls.name) && contactForm.controls.name.invalid) || (submittedOnce &&contactForm.controls.name.invalid)" matSuffix>
                         <mat-error><img class="input-icon animate-contact-icon" type="image/svg+xml" src="assets/svg/invalid.svg"></mat-error>
                     </mat-icon>
                     <mat-icon *ngIf="contactForm.controls.name.valid" matSuffix>
                         <mat-error><img class="input-icon animate-contact-icon" type="image/svg+xml" src="assets/svg/valid.svg"></mat-error>
                     </mat-icon>
                 </mat-form-field>
+
                 <mat-form-field [hideRequiredMarker]="true" appearance="outline">
                     <mat-label>Your email</mat-label>
                     <input matInput placeholder="" formControlName="email" name="email" required>
-                    <mat-error *ngIf="contactForm.controls.email.invalid">{{getMailErrorMessage()}}</mat-error>
-                    <mat-icon *ngIf="(isTouched(contactForm.controls.email) && contactForm.controls.email.invalid)" matSuffix>
+
+                    <mat-icon *ngIf="(isTouched(contactForm.controls.email) && contactForm.controls.email.invalid) || (submittedOnce &&contactForm.controls.email.invalid)" matSuffix>
                         <mat-error><img class="input-icon animate-contact-icon" type="image/svg+xml" src="assets/svg/invalid.svg"></mat-error>
                     </mat-icon>
                     <mat-icon *ngIf="contactForm.controls.email.valid" matSuffix>
                         <mat-error><img class="input-icon animate-contact-icon" type="image/svg+xml" src="assets/svg/valid.svg"></mat-error>
                     </mat-icon>
+
+                    <mat-error *ngIf="contactForm.controls.email.invalid">{{getMailErrorMessage()}}</mat-error>
                 </mat-form-field>
+
                 <mat-form-field [hideRequiredMarker]="true" class="form-field relative" appearance="outline">
                     <mat-label>Your message</mat-label>
                     <textarea matInput formControlName="message" name="message"></textarea>
                     <mat-error *ngIf="contactForm.controls.message.invalid">{{getMsgErrorMessage()}}</mat-error>
-                    <mat-icon *ngIf="(isTouched(contactForm.controls.message) && contactForm.controls.message.invalid)" matSuffix>
+                    <mat-icon *ngIf="(isTouched(contactForm.controls.message) && contactForm.controls.message.invalid) || (submittedOnce &&contactForm.controls.message.invalid)" matSuffix>
                         <mat-error><img class="textarea-icon animate-contact-icon" type="image/svg+xml" src="assets/svg/invalid.svg"></mat-error>
                     </mat-icon>
                     <mat-icon *ngIf="contactForm.controls.message.valid" matSuffix>
                         <mat-error><img class="textarea-icon animate-contact-icon" type="image/svg+xml" src="assets/svg/valid.svg"></mat-error>
                     </mat-icon>
                 </mat-form-field>
-                <div class="d-flex justify-content-center"><button [ngClass]="{'grayscale':contactForm.invalid || contactForm.disabled}" [disabled]="contactForm.invalid || contactForm.disabled" class="main-btn say-hello">Say hello ;)</button></div>
+                <div class="d-flex justify-content-center"><button class="main-btn say-hello">Say hello ;)</button></div>
+                <div class="ellipse-13"></div>
             </form>
-
+            <a href="#header" (mouseenter)="setHover(true);" (mouseleave)="setHover(false);" style="width:min-content" class="d-flex">
+                <img *ngIf="!backToTopHover" src="assets/svg/backToTop.svg" class="back-to-top">
+                <img *ngIf="backToTopHover" src="assets/svg/backToTopHover.svg" class="back-to-top">
+                <div style="height:39px;" class="hidden"></div>
+            </a>
         </div>
     </div>
 </div>
