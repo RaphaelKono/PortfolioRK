@@ -13,17 +13,17 @@ export class SafeUrlPipe implements PipeTransform {
   transform(value: string, type: string) {
     switch (type) {
       case 'html':
-        console.log(this._sanitizer.bypassSecurityTrustHtml(value));
+        // console.log(this._sanitizer.bypassSecurityTrustHtml(value));
         return this._sanitizer.bypassSecurityTrustHtml(value);
       case 'style':
         return this._sanitizer.bypassSecurityTrustStyle(value);
       case 'script':
         return this._sanitizer.bypassSecurityTrustScript(value);
       case 'url':
-        console.log(this._sanitizer.bypassSecurityTrustUrl(value));
+        // console.log(this._sanitizer.bypassSecurityTrustUrl(value));
         return this._sanitizer.bypassSecurityTrustUrl(value);
       case 'resourceUrl':
-        console.log(this._sanitizer.bypassSecurityTrustResourceUrl(value));
+        // console.log(this._sanitizer.bypassSecurityTrustResourceUrl(value));
         return this._sanitizer.bypassSecurityTrustResourceUrl(value);
       default:
         return this._sanitizer.bypassSecurityTrustHtml(value);

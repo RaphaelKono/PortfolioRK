@@ -18,6 +18,18 @@
     }
 }
 
+.grayscale {
+    animation: unset !important;
+    filter: grayscale(1);
+    &:hover {
+        background: none !important;
+        animation: unset !important;
+        border: 2px solid $blue-color !important;
+        color: $blue-color !important;
+        cursor: unset;
+    }
+}
+
 @keyframes btnfill {
     0% {
         background: none;

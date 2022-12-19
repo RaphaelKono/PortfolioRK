@@ -16,12 +16,12 @@
                     <div class="divider">
                         <div></div>
                         <div class="start-links d-flex flex-column">
-                            <a *ngFor="let links of startlinks" href="{{links.url}}" class="svg-link">
-                                <object type="image/svg+xml" [data]="links.name | safeUrl:'resourceUrl'"></object>
-                            </a>
-                            <!-- <a class="svg-link" href=""><object data="assets/svg/gitlink.svg"></object></a>
-                            <a class="svg-link" href=""><object data="assets/svg/contact.svg"></object></a>
-                            <a class="svg-link" href=""><object data="assets/svg/linkedIn.svg"></object></a> -->
+                            <!-- <a *ngFor="let links of startlinks" href="{{links.url}}" class="svg-link">
+                                <img src="{{links.name}}" type="image/svg+xml">
+                            </a> -->
+                            <a class="svg-link" href="https://github.com/RaphaelKono"><img src="assets/svg/gitlink.svg"></a>
+                            <a class="svg-link" href="#contact"><img src="assets/svg/contact.svg"></a>
+                            <a class="svg-link" href=""><img src="assets/svg/linkedIn.svg"></a>
                         </div>
                     </div>
                 </div>

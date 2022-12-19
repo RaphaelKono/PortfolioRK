@@ -27,7 +27,6 @@
 .textarea-icon {
     position: absolute;
     top: 0;
-    // transform: translateY(-100%);
     right: 0;
     margin-top: .5rem;
     margin-right: .5rem;
@@ -49,4 +48,17 @@ mat-label {
 
 mat-error {
     font-family: 'Poppins';
+}
+
+.animate-contact-icon {
+    animation: appearIcon 250ms ease-in-out;
+}
+
+@keyframes appearIcon {
+    from {
+        filter: opacity(0);
+    }
+    to {
+        filter: opacity(1);
+    }
 }

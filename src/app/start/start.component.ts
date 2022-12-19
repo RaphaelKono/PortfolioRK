@@ -12,11 +12,11 @@ export class StartComponent {
   startlinks: any[] = [
     {
       name: 'assets/svg/gitlink.svg',
-      url: ''
+      url: 'https://github.com/RaphaelKono'
     },
     {
       name: 'assets/svg/contact.svg',
-      url: ''
+      url: '#contact'
     },
     {
       name: 'assets/svg/linkedIn.svg',
