@@ -20,6 +20,10 @@ footer {
     font-family: "Montserrat";
     font-size: 1rem;
     cursor: pointer;
+    img {
+        width: calc(30px + 0.5vh);
+        height: calc(30px + 0.5vh);
+    }
 }
 
 .footer-links {

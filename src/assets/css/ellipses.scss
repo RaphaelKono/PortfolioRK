@@ -16,16 +16,16 @@
 .ellipse-two {
     @extend .ellipse;
     z-index: 1;
-    width: 20vmin;
-    height: 20vmin;
+    width: calc(220px + 1vh);
+    height: calc(220px + 1vh);
     bottom: calc(-20vmin/2);
     left: calc(50% - 20vmin/2);
 }
 
 .ellipse-three {
     @extend .ellipse;
-    width: 7vmin;
-    height: 7vmin;
+    width: calc(90px + 1vh);
+    height: calc(90px + 1vh);
     top: 3.5rem;
     right: 25vw;
 }
@@ -108,4 +108,14 @@
     height: 74px;
     bottom: -14rem;
     right: 0;
+}
+
+@media(max-width: 1560px) and (min-height: 1280px) {
+    .ellipse-one {
+        z-index: -1;
+        height: 120vmin;
+        width: 120vmin;
+        top: -34vmin;
+        left: -30vmin;
+    }
 }

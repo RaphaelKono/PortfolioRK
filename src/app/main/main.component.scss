@@ -1,3 +1,13 @@
 app-about-me {
     position: relative;
 }
+
+.vertical-wrapper-section {
+    padding-block: calc(9rem + 1vw);
+}
+
+@media(min-width:3600px) {
+    .vertical-wrapper-section {
+        margin-block: calc(16rem + 10vw) !important;
+    }
+}

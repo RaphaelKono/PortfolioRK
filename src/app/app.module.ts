@@ -19,6 +19,7 @@ import { SafeUrlPipe } from './safe-url.pipe';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MatInputModule } from '@angular/material/input';
     MatSelectModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

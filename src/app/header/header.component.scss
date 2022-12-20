@@ -82,12 +82,85 @@ header {
     }
 }
 
+button {
+    background: transparent;
+    border: none;
+}
+
+
+/* button one */
+
+.button-one {
+    --button-color: #5988FF;
+    display: none;
+    padding: 0;
+    margin: 0;
+    height: 64px;
+    cursor: pointer;
+}
+
+.button-one .line {
+    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transform-origin: center;
+}
+
+.button-one[aria-expanded="true"] .line {
+    transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+.button-one[aria-expanded="true"] :is(.top, .bottom) {
+    y: 45;
+}
+
+.button-one[aria-expanded="true"] .top {
+    rotate: 45deg;
+}
+
+.button-one[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+.button-one[aria-expanded="true"] .bottom {
+    rotate: -45deg;
+}
+
+.example-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    opacity: 0.9;
+    overflow: hidden !important;
+}
+
+.position-menu {
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+}
+
+.responsive-menu {
+    height: 100vh;
+}
+
 @media(min-width:2560px) {
-    .header-links {
+    .header-links,
+    .header-links-side {
         gap: 4rem;
     }
     .header-link {
         width: unset;
         font-size: calc(1.5rem + 1vh);
+    }
+}
+
+@media(max-width: 1560px) and (min-height: 1280px) {
+    .header-links,
+    .header-links-side {
+        display: none;
+    }
+    .button-one {
+        display: unset;
     }
 }
