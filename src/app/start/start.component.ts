@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./start.component.scss']
 })
 
-export class StartComponent {}
+export class StartComponent implements OnInit{
+  @ViewChild('.frontend') frontend:any;
+  @ViewChild('.developer') developer:any;
+
+  ngOnInit(){
+    console.log(this.frontend,this.developer);
+  }
+}
