@@ -2,7 +2,7 @@
 .my-work-bg {
     background: $white-color;
     padding-block: 8rem;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .my-work-container {
@@ -57,5 +57,25 @@
             transform: translateY(-4rem) scale(1.1);
             transition: transform 125ms ease-in-out;
         }
+    }
+}
+
+@media(max-width:1024px) {
+    .mywork {
+        flex-direction: column;
+    }
+    .mywork>* {
+        width: unset;
+    }
+    // .desc-mrg-left {
+    //     margin-left: 0;
+    // }
+    .work-description {
+        margin: 0;
+        margin-bottom: 2.5rem;
+        align-items: center;
+    }
+    .my-work-container h1 {
+        margin-bottom: 2rem;
     }
 }

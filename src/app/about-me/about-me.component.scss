@@ -18,3 +18,16 @@
 .mrg-bottom {
     margin-bottom: 2rem;
 }
+
+@media(max-width:1024px) {
+    .about-me {
+        flex-direction: column;
+        gap: 0;
+    }
+    .about-me-headlines {
+        margin-top: 2rem;
+    }
+    .about-me-childs {
+        width: unset;
+    }
+}

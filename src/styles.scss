@@ -26,3 +26,18 @@ body {
 }
 
 @media(max-width: 1560px) and (min-height: 1280px) {}
+
+@media(max-width: 1200px),
+(max-height: 420px) {
+    html,
+    body {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 440px) {
+    html,
+    body {
+        font-size: 12px;
+    }
+}

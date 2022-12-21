@@ -130,3 +130,18 @@ h3,
         font-size: calc(6rem + 1vh);
     }
 }
+
+@media(max-width:440px) {
+    h1,
+    .mat-h1,
+    .mat-headline-5,
+    .mat-typography .mat-h1,
+    .mat-typography .mat-headline-5,
+    .mat-typography h1 {
+        font-family: 'Baloo 2';
+        font-size: 4rem;
+        font-weight: 700;
+        color: $blue-color;
+        line-height: 0.65;
+    }
+}

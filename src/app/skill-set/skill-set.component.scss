@@ -36,5 +36,38 @@
             }
             font-weight: 700;
         }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+    .skills {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 780px) {
+    .skills {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        margin-top: 3rem;
+        object {
+            width: 50px;
+        }
+    }
+}
+
+@media(max-width:440px) {
+    .skills {
+        gap: .5rem;
+        object {
+            width: 40px;
+            height: 40px;
+        }
+        p {
+            font-size: 1.2rem;
+        }
     }
 }

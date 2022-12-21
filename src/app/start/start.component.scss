@@ -21,7 +21,7 @@
     display: block;
     background: none;
     transform: scaleX(-1);
-    height: 100vh;
+    height: 95vh;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -86,25 +86,26 @@
     }
 }
 
-@media(max-height: 800px) {
-    .start-content {
-        margin-top: 2rem;
-    }
-    .frontend {
-        font-size: 5rem !important;
-    }
-    .developer {
-        font-size: 5rem;
-    }
-}
-
+// @media(max-height: 800px) {
+//     .start-content {
+//         margin-top: 2rem;
+//     }
+//     .frontend {
+//         font-size: 5rem !important;
+//     }
+//     .developer {
+//         font-size: 5rem;
+//     }
+// }
 @media(max-width:1740px) {
     .developer {
         font-size: calc(5.5rem + 1vh);
     }
 }
 
-@media(max-width: 1560px) and (min-height: 1280px) {
+@media(max-width: 1560px) and (min-height: 1280px),
+(max-width: 1400px) and (min-height: 1080px),
+(max-width: 1200px) and (min-height: 800px) {
     .photo {
         height: 60vh;
     }
@@ -135,5 +136,52 @@
     }
     .start-content {
         margin-top: 15vh;
+    }
+}
+
+@media(max-width:1200px) {
+    .advices {
+        display: none;
+    }
+}
+
+@media(max-width:540px) {
+    .photo {
+        height: unset;
+        width: 90vmin;
+    }
+    .start-container {
+        h2 {
+            font-size: calc(2rem + 0.5vh);
+        }
+    }
+    .frontend {
+        font-size: calc(4rem + 1vh);
+    }
+    .developer {
+        font-size: calc(3.7rem + 1vh);
+    }
+}
+
+@media(max-width:440px) {
+    .start-container {
+        h2 {
+            font-size: calc(1.5rem + 0.5vh);
+        }
+    }
+    .start-content {
+        margin-top: 10vh;
+    }
+    .frontend {
+        font-size: calc(3rem + 1vh);
+    }
+    .developer {
+        font-size: calc(2.7rem + 1vh);
+    }
+}
+
+@media(max-height: 660px) {
+    .advices {
+        display: none;
     }
 }

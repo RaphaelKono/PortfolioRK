@@ -1,5 +1,5 @@
 <div class="d-flex wrapper relative">
-    <button (click)="updateBtn()" class="button-one position-menu" aria-controls="primary-navigation" aria-expanded="false" #hamburger>
+    <button (click)="updateNav()" class="button-one position-menu" aria-controls="primary-navigation" aria-expanded="false" #hamburger>
     <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="64">
     <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
     </rect>
@@ -10,9 +10,9 @@
     </svg>
     </button>
 </div>
-<mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav (keydown.escape)="close('escape')" class="example-container" disableClose position="end">
-        <div class="d-flex flex-column justify-content-center align-items-center responsive-menu example-container">
+<mat-sidenav-container class="example-container" [class.vh-100]="has100vh">
+    <mat-sidenav #sidenav (keydown.escape)="updateNav()" class="example-container" disableClose position="end" [class.vh-100]="has100vh">
+        <div class="d-flex flex-column justify-content-center align-items-center responsive-menu example-container" [class.vh-100]="has100vh">
             <a class="header-link" href="#aboutMe">About me</a>
             <a class="header-link" href="#skillSet">Skill set</a>
             <a class="header-link" href="#myWork">My work</a>
