@@ -2,19 +2,11 @@
     min-height: 100vh;
 }
 
-.start-container {
-    justify-content: flex-end;
-    height: 100vh;
-}
-
 .photo {
     display: block;
-    background: none;
-    transform: scaleX(-1);
+    transform: scaleX(-1) translateX(1px);
     height: 85vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    width: fit-content;
 }
 
 .start-content {
@@ -72,93 +64,20 @@
     }
 }
 
-// @media(max-width:1740px) {
-//     .developer {
-//         font-size: calc(5.5rem + 1vh);
-//     }
-// }
-// @media(max-width: 1560px) and (max-aspect-ratio: 135 / 100) {
-//     .photo {
-//         height: 60vh;
-//     }
-//     .start-container {
-//         justify-content: center;
-//         h2 {
-//             color: white;
-//         }
-//     }
-//     .frontend,
-//     .developer {
-//         color: white;
-//     }
-//     .scroll-advice {
-//         a {
-//             color: white;
-//         }
-//     }
-//     .start-links {
-//         border-color: #81a5ff;
-//         a {
-//             position: absolute;
-//             right: 5vw;
-//         }
-//     }
-//     .svg-link1 {
-//         margin-bottom: 10rem;
-//     }
-//     .start-content {
-//         margin-top: 15vh;
-//     }
-// }
-// @media(max-width:1200px) {
-//     .advices {
-//         display: none;
-//     }
-// }
-// @media(max-width:540px),
-// (max-height:600px) {
-//     .start-container {
-//         h2 {
-//             font-size: calc(2rem + 0.5vh);
-//         }
-//     }
-//     .frontend {
-//         font-size: calc(4rem + 1vh);
-//     }
-//     .developer {
-//         font-size: calc(3.7rem + 1vh);
-//     }
-// }
-// @media(max-width:440px),
-// (max-height:440px) {
-//     .start-container {
-//         h2 {
-//             font-size: calc(1.5rem + 0.5vh);
-//         }
-//     }
-//     .frontend {
-//         font-size: calc(3rem + 1vh);
-//     }
-//     .developer {
-//         font-size: calc(2.7rem + 1vh);
-//     }
-// }
-// @media(max-height: 660px) {
-//     .advices {
-//         display: none;
-//     }
-// }
-// @media(max-height:440px) and (orientation:landscape) {
-//     .photo {
-//         height: 75vh;
-//     }
-// }
-.gradient-background {
-    min-height: 100vh;
-    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+.start-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     >* {
         width: 50%;
     }
+    z-index:0;
+}
+
+.light-gradient {
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
 }
 
 .ellipse-img {
@@ -166,11 +85,12 @@
     bottom: 100px;
     right: 0;
     height: 100%;
+    z-index: -1;
 }
 
 .inside-ell-one {
     display: none;
-    margin-top: 100px;
+    margin-bottom: 4rem;
     h1,
     h2 {
         color: white;
@@ -199,7 +119,7 @@
 }
 
 @media(max-width:1024px) {
-    .greeting-container {
+    .greeting {
         h2 {
             font-size: 2.5rem;
         }
@@ -215,7 +135,24 @@
     }
 }
 
-@media(max-height:540px) {
+@media(max-width: 768px) {
+    .greeting {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    .frontend {
+        font-size: 4rem;
+    }
+    .developer {
+        font-size: 3.7rem;
+    }
+    .greeting-container {
+        margin-left: 2rem;
+    }
+}
+
+@media(max-height:640px) {
     .scroll-advice {
         display: none;
     }
@@ -224,5 +161,45 @@
 @media(max-width:440px) {
     .developer {
         font-size: 3.75rem;
+    }
+}
+
+@media(max-aspect-ratio: 68/100) {
+    .inside-ell-one {
+        display: unset;
+    }
+    .greeting-container {
+        display: none;
+    }
+    .start-container {
+        >* {
+            width: 100%;
+        }
+    }
+}
+
+@media(min-aspect-ratio: 184/100) {
+    .ellipse-img {
+        bottom: 5vh;
+        height: 200%;
+    }
+}
+
+@media(min-aspect-ratio: 36/10) {
+    .ellipse-img {
+        bottom: -20%;
+        height: 250%;
+    }
+}
+
+@media(max-aspect-ratio: 39/100) and (max-width:460px) {
+    .photo {
+        transform: translateX(-10%) scaleX(-1);
+    }
+    .ellipse-container {
+        overflow: hidden;
+    }
+    .logo-img {
+        background: #4776fb;
     }
 }

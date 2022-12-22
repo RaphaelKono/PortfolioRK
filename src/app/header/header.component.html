@@ -1,5 +1,5 @@
 <div class="d-flex wrapper relative">
-    <button (click)="updateNav()" class="button-one position-menu" aria-controls="primary-navigation" aria-expanded="false" #hamburger>
+    <button (click)="updateNav()" class="button-one position-menu-right" aria-controls="primary-navigation" aria-expanded="false" #hamburger>
     <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="64">
     <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
     </rect>
@@ -12,17 +12,22 @@
 </div>
 <mat-sidenav-container class="example-container" [class.vh-100]="has100vh">
     <mat-sidenav #sidenav (keydown.escape)="updateNav()" class="example-container" disableClose position="end" [class.vh-100]="has100vh">
-        <div class="d-flex flex-column justify-content-center align-items-center responsive-menu example-container" [class.vh-100]="has100vh">
-            <a class="header-link" href="#aboutMe">About me</a>
-            <a class="header-link" href="#skillSet">Skill set</a>
-            <a class="header-link" href="#myWork">My work</a>
-            <a class="header-link" href="#contact">Contact</a>
+        <div class="wrapper">
+            <button (click)="navigate('')" class="logo">
+                <img class="logo-img photo-in-menu" src="assets/img/logo.png">
+            </button>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center responsive-menu">
+            <a class="header-link" href="#aboutMe" (click)="updateNav()">About me</a>
+            <a class="header-link" href="#skillSet" (click)="updateNav()">Skill set</a>
+            <a class="header-link" href="#myWork" (click)="updateNav()">My work</a>
+            <a class="header-link" href="#contact" (click)="updateNav()">Contact</a>
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
         <header [class.blue-bg]="router.url === '/imprint' || router.url === '/privacy'">
-            <div class="d-flex justify-content-between align-items-center wrapper">
-                <button (click)="navigate('')" class="logo">
+            <div class="d-flex justify-content-between align-items-center wrapper relative">
+                <button (click)="navigate('')" *ngIf="!responsiveMenuOpen" class="logo">
                     <img class="logo-img" src="assets/img/logo.png">
                 </button>
                 <div [class.header-links-side]="router.url === '/imprint' || router.url === '/privacy'" [class.header-links]="router.url !== '/imprint' && router.url !== '/privacy'" class="d-flex">
@@ -35,3 +40,5 @@
     </mat-sidenav-content>
 
 </mat-sidenav-container>
+
+<!-- [class.photo-in-menu]="has100vh" -->

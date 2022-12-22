@@ -104,12 +104,12 @@ button {
 }
 
 .button-one .line {
-    transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transition: y 150ms ease-in 150ms, rotate 150ms ease-in, opacity 0ms 150ms;
     transform-origin: center;
 }
 
 .button-one[aria-expanded="true"] .line {
-    transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+    transition: y 150ms ease-in, rotate 150ms ease-in 150ms, opacity 0ms 150ms;
 }
 
 .button-one[aria-expanded="true"] :is(.top, .bottom) {
@@ -133,19 +133,30 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    // height: 100vh;
-    opacity: 0.9;
+    // opacity: 0.9;
     overflow: hidden !important;
 }
 
-.position-menu {
+.position-menu-right {
     position: absolute;
     right: 0;
     z-index: 9999;
 }
 
 .responsive-menu {
-    height: 100vh;
+    height: calc(100vh - 80px);
+    gap: 3.5rem;
+    a {
+        width: unset;
+        font-weight: 700;
+        font-size: 2.5rem;
+        font-family: 'Montserrat';
+    }
+}
+
+.photo-in-menu {
+    margin-top: 8px;
+    filter: brightness(0.5) sepia(1) hue-rotate(191deg) saturate(6047%);
 }
 
 @media(min-width:2560px) {
@@ -159,12 +170,13 @@ button {
     }
 }
 
-// @media(max-width: 1280px) and (max-aspect-ratio: 135 / 100) {
-//     .header-links,
-//     .header-links-side {
-//         display: none;
-//     }
-//     .button-one {
-//         display: unset;
-//     }
-// }
+@media(max-width: 768px),
+(max-aspect-ratio: 68/100) {
+    .header-links,
+    .header-links-side {
+        display: none;
+    }
+    .button-one {
+        display: unset;
+    }
+}

@@ -27,6 +27,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    transform: scale(1);
+    z-index: 9999;
+    mix-blend-mode: difference;
+    h2 {
+        color: #ffa159;
+    }
 }
 
 .desc-mrg-right {
@@ -62,7 +68,10 @@
 
 @media(max-width:1024px) {
     .mywork {
-        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .img-container {
+        margin-bottom: 1.5rem;
     }
     .mywork>* {
         width: unset;

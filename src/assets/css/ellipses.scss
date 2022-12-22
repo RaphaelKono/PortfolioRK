@@ -134,17 +134,26 @@
 //     }
 // }
 @media(max-width:1024px) {
-    .ellipse-12 {
-        width: 204px;
-        height: 204px;
-        bottom: 13rem;
-        left: 58vw;
-    }
     .ellipse-three {
         width: calc(90px + 1vh);
         height: calc(90px + 1vh);
         top: 3.5rem;
         right: 5vw;
+    }
+    .ellipse-four {
+        top: -4rem;
+    }
+    .ellipse-six {
+        width: 50vmin;
+        height: 50vmin;
+        top: 4rem;
+        left: -18rem;
+    }
+    .ellipse-12 {
+        width: 204px;
+        height: 204px;
+        bottom: 13rem;
+        left: 58vw;
     }
 }
 
