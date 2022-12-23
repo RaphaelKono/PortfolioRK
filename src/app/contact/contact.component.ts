@@ -1,5 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -17,6 +18,8 @@ export class ContactComponent {
 
   submittedOnce=false;
   backToTopHover = false;
+
+  constructor(private _snackBar: MatSnackBar) {}
 
   getMailErrorMessage() {
     if (this.contactForm.controls.email.hasError('required')) {
@@ -46,19 +49,22 @@ export class ContactComponent {
   async sendMail() {
     this.submittedOnce = true;
     if (this.contactForm.valid) {
-      console.log('Sending mail', this.contactForm);
       this.contactForm.disable();
       let fd = new FormData();
       fd.append('name',this.contactForm.controls.name.value);
       fd.append('message',this.contactForm.controls.message.value);
-      console.log(this.contactForm.controls.name.value);
-      console.log(this.contactForm.controls.message.value);
-      // await fetch(url,{
-      //   method: 'POST',
-      //   body: fd
-      // });
+      fd.append('email',this.contactForm.controls.email.value);
+      await fetch('https://konopatzki.info/send_mail.php',{
+        method: 'POST',
+        body: fd
+      });
       this.contactForm.enable();
+      this.openSnackBar('Message has been sent', 'Close');
     }
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
   }
 
   setHover(bool: boolean){

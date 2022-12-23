@@ -25,8 +25,8 @@
     &:active {
         background: #0043F0;
         color: white;
-        transform: scale(0.96);
-        border: none;
+        transform: scale(0.9);
+        border: 2px solid #0043F0;
         transition: transform 75ms ease-in-out;
     }
 }

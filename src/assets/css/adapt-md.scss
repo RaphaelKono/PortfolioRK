@@ -122,9 +122,25 @@ h3,
 }
 
 .mat-drawer {
-    // background-color: rgba(255, 255, 255, 0.85);
     background-color: unset !important;
     background: linear-gradient(179.99deg, rgba(255, 255, 255, 0.8) 12.89%, rgba(234, 240, 255, 0.8) 91.39%);
+}
+
+.mat-mdc-simple-snack-bar {
+    background: white !important;
+    border: unset !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    background-color: white !important;
+}
+
+.mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
+    color: #5988ff !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__label {
+    color: #5988ff !important;
 }
 
 @media(max-width:1740px) {

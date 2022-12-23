@@ -56,9 +56,9 @@
 
 .ellipse-seven {
     @extend .ellipse;
-    width: 652px;
-    height: 652px;
-    top: -2rem;
+    width: 605px;
+    height: 605px;
+    top: -10rem;
     left: 16rem;
 }
 
@@ -67,7 +67,7 @@
     width: 237px;
     height: 237px;
     top: 18rem;
-    left: 3rem;
+    left: -5rem;
 }
 
 .ellipse-nine {
@@ -91,7 +91,7 @@
     width: 130px;
     height: 130px;
     top: -10rem;
-    left: 25vw;
+    left: 49vw;
 }
 
 .ellipse-12 {
@@ -110,29 +110,6 @@
     right: 0;
 }
 
-@media(max-width: 1560px) and (max-aspect-ratio: 135 / 100) {
-    // .ellipse-one {
-    //     height: 120vmin;
-    //     width: 120vmin;
-    //     top: -34vmin;
-    //     left: -30vmin;
-    // }
-    // .ellipse-one {
-    //     height: 91vmax;
-    //     width: 90vmax;
-    //     top: -8vmax;
-    //     left: -44vmax;
-    // }
-}
-
-// @media(max-aspect-ratio: 85 / 100) {
-//     .ellipse-one {
-//         height: 105vmax;
-//         width: 105vmax;
-//         top: -9vmax;
-//         left: -23vmax;
-//     }
-// }
 @media(max-width:1024px) {
     .ellipse-three {
         width: calc(90px + 1vh);
@@ -149,11 +126,23 @@
         top: 4rem;
         left: -18rem;
     }
+    .ellipse-seven {
+        width: 652px;
+        height: 652px;
+        top: -10rem;
+        left: 30rem;
+    }
+    .ellipse-eight {
+        width: 237px;
+        height: 237px;
+        top: 1rem;
+        left: -16rem;
+    }
     .ellipse-12 {
         width: 204px;
         height: 204px;
-        bottom: 13rem;
-        left: 58vw;
+        bottom: -15rem;
+        left: 64vw;
     }
 }
 

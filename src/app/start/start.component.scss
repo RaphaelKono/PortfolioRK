@@ -6,7 +6,7 @@
     display: block;
     transform: scaleX(-1) translateX(1px);
     height: 85vh;
-    width: fit-content;
+    width: 58vh;
 }
 
 .start-content {
@@ -115,6 +115,7 @@
 @media(max-width:1280px) {
     .photo {
         height: 70vh;
+        width: 50vh;
     }
 }
 
@@ -132,6 +133,7 @@
     }
     .photo {
         height: 50vh;
+        width: 35vh;
     }
 }
 
