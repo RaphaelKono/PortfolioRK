@@ -75,6 +75,15 @@ textarea {
     animation: backToTopIn 75ms ease-in;
 }
 
+.back-to-top-img {
+    background-image: url('../../assets/svg/backToTop.svg');
+    transition: background-image 125ms ease-in-out;
+    &:hover {
+        background-image: url('../../assets/svg/backToTopHover.svg');
+        transition: background-image 125ms ease-in-out;
+    }
+}
+
 @keyframes backToTopIn {
     from {
         opacity: 0;

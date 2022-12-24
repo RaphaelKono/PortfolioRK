@@ -53,10 +53,8 @@
                 <div class="d-flex justify-content-center"><button class="main-btn say-hello">Say hello ;)</button></div>
                 <div class="ellipse-13"></div>
             </form>
-            <a href="#header" (mouseenter)="setHover(true);" (mouseleave)="setHover(false);" style="width:min-content" class="d-flex">
-                <img *ngIf="!backToTopHover" src="assets/svg/backToTop.svg" class="back-to-top">
-                <img *ngIf="backToTopHover" src="assets/svg/backToTopHover.svg" class="back-to-top">
-                <div style="height:39px;" class="hidden"></div>
+            <a href="#header">
+                <div style="height:39px; width:39px;" class="back-to-top-img"></div>
             </a>
         </div>
     </div>
