@@ -106,10 +106,16 @@ button {
 .button-one .line {
     transition: y 150ms ease-in 150ms, rotate 150ms ease-in, opacity 0ms 150ms;
     transform-origin: center;
+    -webkit-transition: y 150ms ease-in 150ms, rotate 150ms ease-in, opacity 0ms 150ms;
+    -webkit-transform-origin: center;
+    -moz-transition: y 150ms ease-in 150ms, rotate 150ms ease-in, opacity 0ms 150ms;
+    -moz-transform-origin: center;
 }
 
 .button-one[aria-expanded="true"] .line {
     transition: y 150ms ease-in, rotate 150ms ease-in 150ms, opacity 0ms 150ms;
+    -webkit-transition: y 150ms ease-in, rotate 150ms ease-in 150ms, opacity 0ms 150ms;
+    -moz-transition: y 150ms ease-in, rotate 150ms ease-in 150ms, opacity 0ms 150ms;
 }
 
 .button-one[aria-expanded="true"] :is(.top, .bottom) {
@@ -133,13 +139,13 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    // opacity: 0.9;
     overflow: hidden !important;
 }
 
 .position-menu-right {
     position: absolute;
     right: 0;
+    top: 0;
     z-index: 9999;
 }
 
