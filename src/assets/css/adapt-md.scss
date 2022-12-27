@@ -25,7 +25,7 @@ h1,
 .mat-typography .mat-headline-5,
 .mat-typography h1 {
     font-family: 'Baloo 2';
-    font-size: calc(8rem + 1vh);
+    font-size: calc(7rem + .5vmin);
     font-weight: 700;
     color: $blue-color;
     line-height: 0.65;
@@ -42,7 +42,7 @@ h2,
 .mat-typography .mat-headline-6,
 .mat-typography h2 {
     font-family: 'Montserrat';
-    font-size: calc(4rem + .5vh);
+    font-size: calc(4rem + .5vmin);
     color: $blue-color;
     &:after,
     &:before {
@@ -68,7 +68,7 @@ h3,
 .mat-typography .mat-body-2 p,
 .mat-typography p {
     font-family: 'Montserrat';
-    font-size: calc(1.5rem + .15vh);
+    font-size: calc(1.5rem + .15vmin);
     margin: unset;
     margin-block-start: .75em;
     margin-block-end: .75em;
