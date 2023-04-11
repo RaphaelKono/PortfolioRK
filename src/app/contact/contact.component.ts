@@ -11,9 +11,9 @@ export class ContactComponent {
   @ViewChild('myForm') myForm: any;
 
   contactForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
+    name: new FormControl('', [Validators.required, this.noWhitespaceValidator]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    message: new FormControl('', [Validators.required])
+    message: new FormControl('', [Validators.required, this.noWhitespaceValidator])
   });
 
   submittedOnce=false;
@@ -29,14 +29,14 @@ export class ContactComponent {
   }
 
   getNameErrorMessage() {
-    if (this.contactForm.controls.name.hasError('required')) {
+    if (this.contactForm.controls.name.hasError('required') || this.contactForm.controls.name.hasError('whitespace')) {
       return 'Your name is required';
     }
     return '';
   }
 
   getMsgErrorMessage() {
-    if (this.contactForm.controls.message.hasError('required')) {
+    if (this.contactForm.controls.message.hasError('required') || this.contactForm.controls.message.hasError('whitespace')) {
       return 'Your message is empty';
     }
     return '';
@@ -70,4 +70,11 @@ export class ContactComponent {
   setHover(bool: boolean){
     this.backToTopHover = bool;
   }
+
+  public noWhitespaceValidator(control: FormControl) {
+    const isWhitespace = (control.value || '').trim().length === 0;
+    const isValid = !isWhitespace;
+    return isValid ? null : { 'whitespace': true };
+  }
 }
+
